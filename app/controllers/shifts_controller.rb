@@ -8,12 +8,10 @@ class ShiftsController < ApplicationController
   def show
   end
 
-  # GET /shifts/new
   def new
     @shift = Shift.new
   end
 
-  # GET /shifts/1/edit
   def edit
   end
 
@@ -55,12 +53,10 @@ class ShiftsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_shift
       @shift = Shift.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def shift_params
       params.require(:shift).permit(:planning_id, :worker_id, :start_date)
     end
