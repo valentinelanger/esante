@@ -11,9 +11,17 @@
   </head>
 
   <body>
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
-    <%= javascript_pack_tag "application" %>
-  </body>
 
+    <%= render 'shared/navbar' %>
+    <div class="height-page">
+      <%= yield %>
+    </div>
+
+    <footer>
+      <%= render 'shared/footer' %>
+    </footer>
+
+    <%= javascript_include_tag "application" %>
+
+  </body>
 </html>

@@ -1,0 +1,23 @@
+.simple-calendar {
+    margin-top: 30px;
+}
+
+.calendar-heading {
+    text-align: center;
+    margin: 20px 0;
+    a {
+        font-size: 14px;
+        color: $dark-gray;
+    }
+    a:hover {
+        text-decoration:none;
+    }
+}
+
+.calendar-heading > * {
+    padding: 5px;
+}
+
+.wday-0, .wday-6 {
+    background-color: $light-gray;
+}
