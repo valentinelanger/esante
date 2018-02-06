@@ -1,0 +1,15 @@
+<div class="dialog-container dialog-container-<%= shift.id %> hide">
+  <div class='dialog-title'>
+    <h1><%= shift.start_date.strftime("%B %d, %y") %></h1>
+    <span class="close"></span>
+    <%= icon('times', class: 'close-icon') %>
+    <%= link_to edit_worker_path(shift.worker) do %>
+        <%= icon('pencil', class: 'edit-worker') %>
+    <% end%>
+  </div>
+  <div class="dialog-content">
+    <p>Firstname: <span><%= shift.worker.first_name %></span></p>
+    <p>Lastname: <span><%= shift.worker.last_name %></span></p>
+    <p>Status: <span><%= shift.worker.status %></span></p>
+  </div>
+</div>

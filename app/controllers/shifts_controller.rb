@@ -5,8 +5,6 @@ class ShiftsController < ApplicationController
     @shifts = Shift.all
   end
 
-  # GET /shifts/1
-  # GET /shifts/1.json
   def show
   end
 
@@ -19,24 +17,23 @@ class ShiftsController < ApplicationController
   def edit
   end
 
-  # POST /shifts
-  # POST /shifts.json
   def create
     @shift = Shift.new(shift_params)
+    @shifts = Shift.where(start_date: @shift.start_date)
 
     respond_to do |format|
-      if @shift.save
-        format.html { redirect_to @shift, notice: 'Shift was successfully created.' }
-        format.json { render :show, status: :created, location: @shift }
+      if @shifts.count > 0
+        format.html { redirect_to shifts_url  , notice: 'Date already assigned' }
+      elsif @shift.save
+        format.html { redirect_to shifts_url  , notice: 'Shift was successfully created.' }
+        # format.json { render :show, status: :created, location: @shift }
       else
         format.html { render :new }
-        format.json { render json: @shift.errors, status: :unprocessable_entity }
+        # format.json { render json: @shift.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PATCH/PUT /shifts/1
-  # PATCH/PUT /shifts/1.json
   def update
     respond_to do |format|
       if @shift.update(shift_params)
@@ -49,8 +46,6 @@ class ShiftsController < ApplicationController
     end
   end
 
-  # DELETE /shifts/1
-  # DELETE /shifts/1.json
   def destroy
     @shift.destroy
     respond_to do |format|

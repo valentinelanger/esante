@@ -1,50 +1,23 @@
-<p id="notice"><%= notice %></p>
 
+<p id="notice" class="text-center"><%= notice %></p>
 
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <%= month_calendar events: @shifts do |date, shifts| %>
-        <%= date %>
-        <span></span>
+        <%= date.strftime("%d") %>
+
         <% shifts.each do |shift| %>
 
-          <%= link_to shift do %>
-            <div class='shift-event'>
+            <div class='shift-event shift-event-<%= shift.id %>' data-id='<%= shift.id %>'>
               <%= shift.worker.first_name %> <%= shift.worker.last_name %>
+
+              <%= render 'workers/dialog', shift: shift %>
             </div>
-          <% end %>
+
         <% end %>
       <% end %>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Planning</th>
-            <th>User</th>
-            <th>Start date</th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @shifts.each do |shift| %>
-            <tr>
-              <td><%= shift.planning_id %></td>
-              <td><%= shift.worker_id %></td>
-              <td><%= shift.start_date %></td>
-              <td><%= link_to 'Show', shift %></td>
-              <td><%= link_to 'Edit', edit_shift_path(shift) %></td>
-              <td><%= link_to 'Destroy', shift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-
-      <br>
-
-      <%= link_to 'New Shift', new_shift_path %>
-
+      <button class='btn btn-primary'><%= link_to 'New Shift', new_shift_path %></button>
     </div>
   </div>
 </div>

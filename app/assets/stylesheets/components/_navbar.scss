@@ -25,11 +25,11 @@
     color: $dark-gray;
     &:hover {
       text-decoration: none;
-      color: $dark-gray;
+      color: $blue-light;
     }
     &:hover:after {
         position: absolute;
-        border-bottom: 3px solid #82D173;
+        border-bottom: 3px solid $blue-light;
         top: 40px;
         left: 0;
         right: 0;
