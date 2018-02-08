@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 20180206115908) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "shifts", force: :cascade do |t|
-    t.integer "planning_id", limit: 8
-    t.integer "worker_id", limit: 8
+    t.bigint "planning_id"
+    t.bigint "worker_id"
     t.date "start_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
