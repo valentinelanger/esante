@@ -11,3 +11,8 @@
     background-repeat: none !important;
 }
 
+.selectize-input.input-active, .selectize-input.input-active:hover, .focus {
+    border-color: none !important;
+    box-shadow: none !important;
+}
+

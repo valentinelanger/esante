@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :shifts
   resources :workers, only: [:index, :show, :edit, :update, :new, :create]
 
-  root to: 'workers#index'
+  root to: 'shifts#index'
 end

@@ -356,13 +356,7 @@
   box-shadow: 0 1px 0 rgba(0,0,0,0.2),inset 0 1px rgba(255,255,255,0.03);
 }
 .selectize-control.multi .selectize-input [data-value].active {
-  background-color: #0085d4;
-  background-image: -moz-linear-gradient(top, #008fd8, #0075cf);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#008fd8), to(#0075cf));
-  background-image: -webkit-linear-gradient(top, #008fd8, #0075cf);
-  background-image: -o-linear-gradient(top, #008fd8, #0075cf);
-  background-image: linear-gradient(to bottom, #008fd8, #0075cf);
-  background-repeat: repeat-x;
+  background-color: $blue-light;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff008fd8', endColorstr='#ff0075cf', GradientType=0);
 }
 .selectize-control.single .selectize-input {
