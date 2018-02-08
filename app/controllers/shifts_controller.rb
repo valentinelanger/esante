@@ -22,9 +22,6 @@ class ShiftsController < ApplicationController
   end
 
   def create
-    if !shift_params
-      flash[:alert] = "undefined values for your shift"
-    end
     @shift = Shift.new(shift_params)
     @shifts = Shift.where(start_date: @shift.start_date)
 

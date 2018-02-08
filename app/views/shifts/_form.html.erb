@@ -9,7 +9,8 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, { value: 'save', class: 'btn btn-sm button-esante' } %>
+        <%= link_to 'cancel', shifts_path, class: 'btn btn-default button-esante-default' %>
+        <%= f.button :submit, { value: 'save', class: 'btn button-esante' } %>
       </div>
     <% end %>
 </div>

@@ -3,9 +3,7 @@
         <div class="col-xs-12 col-sm-6 col-sm-offset-3">
             <div class="form-title">
                 <h1>Add a shift</h1>
-                <%= link_to shifts_path  do %>
-                    <%= icon('times', class: 'back-icon') %>
-                <% end %>
+
             </div>
             <%= render 'form', shift: @shift %>
         </div>

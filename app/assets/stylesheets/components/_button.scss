@@ -12,3 +12,12 @@
 .calendar-esante .button-esante {
     float: right;
 }
+
+.button-esante-default {
+    background-color: $light-gray;
+    border: none;
+    border-radius: 6px;
+    &:hover {
+        background-color: darken($light-gray, 10%);
+    }
+}
