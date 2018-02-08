@@ -1,5 +1,5 @@
 .simple-calendar {
-    margin-top: 30px;
+    margin: 50px 0;
     table > tbody > tr {
         min-height: 100px;
     }
@@ -10,24 +10,28 @@
 
 .calendar-heading {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
     a {
         font-size: 14px;
         color: $dark-gray;
     }
     a:hover {
         text-decoration:none;
+        font-weight: bolder;
     }
 }
-table tbody tr td {
+.simple-calendar table > tbody > tr > td {
     min-height: 100px !important;
+
 }
-table thead tr th {
+.simple-calendar table thead tr th {
     text-align: center;
 }
 
 .day {
     text-align: right;
+    max-width: 170px !important;
+    width: 14%;
 }
 
 .calendar-heading > * {
@@ -35,9 +39,9 @@ table thead tr th {
 }
 
 .wday-1, .wday-2, .wday-3, .wday-4, .wday-5 {
-    background-color: white !important;
+    background-color: white;
 }
 
-.wday-0, .wday-6 {
+.wday-0, .wday-6, .prev-month {
     background-color: $light-gray;
 }

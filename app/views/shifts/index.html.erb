@@ -4,20 +4,20 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <%= month_calendar events: @shifts do |date, shifts| %>
-        <%= date.strftime("%d") %>
+      <div class="calendar-esante">
+        <%= link_to 'New Shift', new_shift_path, { class: 'btn btn-sm button-esante'} %>
+        <%= month_calendar events: @shifts do |date, shifts| %>
+          <%= date.strftime("%d") %>
+          <% shifts.each do |shift| %>
+              <div class='shift-event shift-event-<%= shift.id %>' data-id='<%= shift.id %>'>
+                <%= shift.worker.first_name %> <%= shift.worker.last_name %>
 
-        <% shifts.each do |shift| %>
-
-            <div class='shift-event shift-event-<%= shift.id %>' data-id='<%= shift.id %>'>
-              <%= shift.worker.first_name %> <%= shift.worker.last_name %>
-
-              <%= render 'workers/dialog', shift: shift %>
-            </div>
-
+                <%= render 'workers/dialog', shift: shift %>
+              </div>
+          <% end %>
         <% end %>
-      <% end %>
-      <button class='btn btn-primary'><%= link_to 'New Shift', new_shift_path %></button>
+
+      </div>
     </div>
   </div>
 </div>

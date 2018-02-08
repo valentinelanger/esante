@@ -24,10 +24,8 @@ class ShiftsController < ApplicationController
         format.html { redirect_to shifts_url  , notice: 'Date already assigned' }
       elsif @shift.save
         format.html { redirect_to shifts_url  , notice: 'Shift was successfully created.' }
-        # format.json { render :show, status: :created, location: @shift }
       else
         format.html { render :new }
-        # format.json { render json: @shift.errors, status: :unprocessable_entity }
       end
     end
   end

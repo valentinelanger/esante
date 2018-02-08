@@ -20,16 +20,30 @@
     position: relative;
 }
 
+.active {
+  text-decoration: none;
+  color: $blue-light;
+  &:after {
+    position: absolute;
+    border-bottom: 3px solid $blue-light;
+    top: 40px;
+    left: 0;
+    right: 0;
+    content: "";
+  }
+}
+
 .link-navbar {
     text-decoration: none;
-    color: $dark-gray;
+    font-weight: bold;
+    color: $almost-black;
     &:hover {
       text-decoration: none;
       color: $blue-light;
     }
     &:hover:after {
         position: absolute;
-        border-bottom: 3px solid $blue-light;
+        border-bottom: 4px solid $blue-light;
         top: 40px;
         left: 0;
         right: 0;

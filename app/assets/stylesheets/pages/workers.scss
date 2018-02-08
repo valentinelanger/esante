@@ -1,5 +1,13 @@
 .worker-table {
-    margin: 25px auto;
+    margin: 40px auto;
+    padding: 40px 0;
     width: 100%;
 }
 
+.workers-index .button-esante {
+    float: right;
+}
+
+.worker-table table > tbody > tr > td {
+    text-align: left;
+}
