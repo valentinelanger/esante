@@ -1,11 +1,11 @@
 .form {
-    margin: 25px 0;
+    margin: 25px;
 }
 
 
 .form-title {
-
-    margin: 40px 0;
+    margin: 40px 0 0 25px;
+    padding-bottom: 25px;
     h1 {
         margin: 0;
         font-size: 32px
@@ -18,4 +18,43 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+}
+
+.form-group {
+    margin-bottom: 35px;
+}
+
+.form-control {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.15) !important;
+    box-shadow: none !important;
+    border-radius: 0px !important;
+}
+
+.form-inline {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 20%;
+    border-radius: 0px !important;
+    -webkit-appearance: none;
+    .form-control {
+        border-radius: 0px !important;
+        -webkit-appearance: none;
+        min-width: 100px;
+        color: #999;
+    }
+
+}
+
+label {
+    font-weight: lighter;
+}
+
+input[type="text"]::placeholder {
+  color: $dark-gray !important;
+}
+
+abbr {
+    display: none;
 }

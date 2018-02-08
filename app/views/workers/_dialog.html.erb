@@ -3,6 +3,11 @@
     <h1><%= shift.start_date.strftime("%B %d, %y") %></h1>
     <span class="close"></span>
     <%= icon('times', class: 'close-icon') %>
+
+    <%= link_to shift, method: :delete do %>
+      <%= icon('trash', class: 'delete-icon') %>
+    <% end %>
+
     <%= link_to edit_shift_path(shift) do %>
         <%= icon('pencil', class: 'edit-shift') %>
     <% end%>

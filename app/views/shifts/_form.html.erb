@@ -3,9 +3,9 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
-        <%= f.input :planning_id %>
-        <%= f.input :worker_id %>
-        <%= f.input :start_date %>
+        <%= f.input :planning_id, label: false, placeholder: "planning ID" %>
+        <%= f.input :worker_id, label: false, placeholder: "worker ID" %>
+        <%= f.input :start_date, as: :date, label: "Shift date:", order: [:day, :month, :year] %>
       </div>
 
       <div class="form-actions">
