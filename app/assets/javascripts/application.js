@@ -12,8 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= require selectize
 //= require_tree .
+
+$('.selectize').selectize({
+    valueField: 'id',
+    labelField: 'name',
+    searchField: ['name', 'id'],
+    sortField: 'text',
+    create: false
+});
 
 
 

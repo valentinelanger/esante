@@ -4,7 +4,7 @@
 
       <div class="form-inputs">
         <%= f.input :planning_id, label: false, placeholder: "planning ID" %>
-        <%= f.association :worker, label_method: :name, value_method: :id %>
+        <%= f.select :worker_id, Worker.all.map { |w| [w.name, w.id] }, {}, { multiple:false, class: 'selectize' } %>
         <%= f.input :start_date, as: :date, label: "Shift date:", order: [:day, :month, :year] %>
       </div>
 
