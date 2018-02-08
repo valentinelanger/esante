@@ -2,6 +2,12 @@
     position: relative;
 }
 
+.calendar-title {
+    font-size: 24px;
+    font-weight: bolder;
+    color: $gray;
+}
+
 .simple-calendar {
     margin: 50px 0;
     table > tbody > tr {

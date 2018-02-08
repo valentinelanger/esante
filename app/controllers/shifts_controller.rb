@@ -12,7 +12,7 @@ class ShiftsController < ApplicationController
 
   def new
     if (params[:shift])
-      @shift = Shift.new(shift_params_new)
+      @shift = Shift.new(shift_params)
     else
       @shift = Shift.new
     end
@@ -40,7 +40,7 @@ class ShiftsController < ApplicationController
   def update
     respond_to do |format|
       if @shift.update(shift_params)
-        format.html { redirect_to @shift, notice: 'Shift was successfully updated.' }
+        format.html { redirect_to shifts_url, notice: 'Shift was successfully updated.' }
         format.json { render :show, status: :ok, location: @shift }
       else
         format.html { render :edit }
@@ -64,9 +64,5 @@ class ShiftsController < ApplicationController
 
     def shift_params
       params.require(:shift).permit(:start_date, :worker_id, :planning_id)
-    end
-
-    def shift_params_new
-      params.require(:shift).permit(:start_date)
     end
 end

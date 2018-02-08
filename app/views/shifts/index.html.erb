@@ -14,10 +14,13 @@
             <% end %>
           <% end %>
 
+
+
+
           <%= date.strftime("%d") %>
 
           <% shifts.each do |shift| %>
-              <div class='shift-event shift-event-<%= shift.id %>' data-id='<%= shift.id %>'>
+              <div id='shift-event' class='shift-event shift-event-<%= shift.id %>' data-id='<%= shift.id %>'>
                 <%= shift.worker.first_name %> <%= shift.worker.last_name %>
 
                 <%= render 'workers/dialog', shift: shift %>
