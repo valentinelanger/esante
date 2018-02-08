@@ -3,27 +3,37 @@ class ShiftsController < ApplicationController
 
   def index
     @shifts = Shift.all
+    @shifts_date = @shifts.map { |shift| shift.start_date }
+    return @shifts, @shifts_date
   end
 
   def show
   end
 
   def new
-    @shift = Shift.new
+    if (params[:shift])
+      @shift = Shift.new(shift_params_new)
+    else
+      @shift = Shift.new
+    end
   end
 
   def edit
   end
 
   def create
+    if !shift_params
+      flash[:alert] = "undefined values for your shift"
+    end
     @shift = Shift.new(shift_params)
     @shifts = Shift.where(start_date: @shift.start_date)
 
     respond_to do |format|
       if @shifts.count > 0
-        format.html { redirect_to shifts_url  , notice: 'Date already assigned' }
+        flash[:alert] = "Date already assigned, please remove the shift before adding a new one"
+        format.html { redirect_to shifts_url }
       elsif @shift.save
-        format.html { redirect_to shifts_url  , notice: 'Shift was successfully created.' }
+        format.html { redirect_to shifts_url, notice: 'Shift was successfully created.' }
       else
         format.html { render :new }
       end
@@ -56,6 +66,10 @@ class ShiftsController < ApplicationController
     end
 
     def shift_params
-      params.require(:shift).permit(:planning_id, :worker_id, :start_date)
+      params.require(:shift).permit(:start_date, :worker_id, :planning_id)
+    end
+
+    def shift_params_new
+      params.require(:shift).permit(:start_date)
     end
 end

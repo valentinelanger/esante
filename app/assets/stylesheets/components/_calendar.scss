@@ -1,3 +1,7 @@
+.calendar-esante {
+    position: relative;
+}
+
 .simple-calendar {
     margin: 50px 0;
     table > tbody > tr {
@@ -29,9 +33,40 @@
 }
 
 .day {
+    position: relative;
     text-align: right;
     max-width: 170px !important;
     width: 14%;
+}
+
+.add-shift {
+    position: absolute;
+    top: 40%;
+    left: 43%;
+    font-size: 26px;
+    color: $olive;
+    &:hover {
+        color: $olive-dark;
+    }
+}
+
+.add-shift-big {
+    position: absolute;
+    top: -20px;
+    right: 9px;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    font-size: 36px;
+    color: white;
+    background-color: $olive;
+    padding-top: 13px;
+    padding-left: 1px;
+    &:hover {
+        background-color: $olive-dark;
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.2);
+    }
 }
 
 .calendar-heading > * {

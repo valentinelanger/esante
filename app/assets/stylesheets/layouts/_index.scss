@@ -6,7 +6,7 @@
 
 .height-page {
   min-height: calc(100vh - 60px);
-  margin-top: 90px;
+  margin-top: 60px;
 }
 
 a {
@@ -19,6 +19,6 @@ a {
     }
 }
 
-#notice {
-    background-color: $dark-gray;
+.alert {
+    margin-top: 70px;
 }

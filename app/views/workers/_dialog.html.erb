@@ -3,8 +3,8 @@
     <h1><%= shift.start_date.strftime("%B %d, %y") %></h1>
     <span class="close"></span>
     <%= icon('times', class: 'close-icon') %>
-    <%= link_to edit_worker_path(shift.worker) do %>
-        <%= icon('pencil', class: 'edit-worker') %>
+    <%= link_to edit_shift_path(shift) do %>
+        <%= icon('pencil', class: 'edit-shift') %>
     <% end%>
   </div>
   <div class="dialog-content">

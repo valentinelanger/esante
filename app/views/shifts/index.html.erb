@@ -1,13 +1,21 @@
-
-<p id="notice" class="text-center"><%= notice %></p>
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <div class="calendar-esante">
-        <%= link_to 'New Shift', new_shift_path, { class: 'btn btn-sm button-esante'} %>
+        <%= link_to new_shift_path do %>
+          <%= icon('plus', class: 'add-shift-big') %>
+        <% end %>
+
         <%= month_calendar events: @shifts do |date, shifts| %>
+
+          <% if !@shifts_date.include?(date) %>
+            <%= link_to new_shift_path(:shift => { :start_date => date }) do %>
+              <%= icon('plus', class: 'add-shift') %>
+            <% end %>
+          <% end %>
+
           <%= date.strftime("%d") %>
+
           <% shifts.each do |shift| %>
               <div class='shift-event shift-event-<%= shift.id %>' data-id='<%= shift.id %>'>
                 <%= shift.worker.first_name %> <%= shift.worker.last_name %>

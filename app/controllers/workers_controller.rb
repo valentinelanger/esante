@@ -20,11 +20,10 @@ class WorkersController < ApplicationController
 
     respond_to do |format|
       if @worker.save
-        format.html { redirect_to @worker, notice: 'Worker was successfully created.' }
-        format.json { render :show, status: :created, location: @worker }
+        format.html { redirect_to workers_url, notice: 'Worker was successfully created.' }
       else
+        flash[:alert] = "there is a problem"
         format.html { render :new }
-        format.json { render json: @worker.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -55,6 +54,6 @@ class WorkersController < ApplicationController
     end
 
     def worker_params
-      params.require(:worker).permit(:firstname, :lastname, :status)
+      params.require(:worker).permit(:first_name, :last_name, :status)
     end
 end
