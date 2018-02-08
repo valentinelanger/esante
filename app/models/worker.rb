@@ -9,4 +9,8 @@ class Worker < ApplicationRecord
         current_month = Date.today.mon
         nb_shifts = Shift.count { |shift| shift.worker_id == self.id && shift.start_date.mon == current_month }
     end
+
+    def name
+        "#{self.first_name} #{self.last_name}"
+    end
 end
