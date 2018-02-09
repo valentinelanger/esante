@@ -26,3 +26,26 @@ td, th {
     text-align: left;
     padding: 8px;
 }
+
+.table-worker-header {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-worker {
+    border: none !important;
+    border-bottom: 1px solid $olive-dark !important;
+}
+
+input[type="text"]::placeholder {
+  color: $olive-dark !important;
+}
+
+.actions-workers {
+    display:flex;
+    justify-content: space-around;
+    a {
+        color: $olive-dark;
+    }
+}

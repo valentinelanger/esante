@@ -1,44 +1,45 @@
-<p id="notice"><%= notice %></p>
-
-
-
-
   <div class="container" ng-app="eSante">
     <div ng-controller="WorkerCtrl">
       <div class="row">
-        <div class="col-md-2">
-          Search:
-        </div>
-        <div class="col-md-10">
-          <input type="text" class="search" data-ng-model="table" />
+        <div class="col-xs-12">
+          <div class="table-worker-header">
+            <input type="text" class="search-worker" data-ng-model="table" placeholder="search for anything" />
+            <a class='button-esante btn-sm' href="workers/new">Add a worker</a>
+          </div>
+
         </div>
       </div>
-      <br/>
-      <table>
-        <tr>
-           <th>ID</th>
-            <th>Name</th>
-            <th>Status</th>
-            <th>Shifts number this month </th>
-            <th colspan="3">Actions</th>
-        </tr>
-        <tr ng-repeat="worker in workers">
-          <td>{{worker.id}}</td>
-          <td>{{worker.name}}</td>
-          <td>{{worker.status}}</td>
-          <td>{{worker.nb_shifts}}</td>
-          <td>
-            <a href="/workers/{{worker.id}}//edit">
-              <%= icon('pencil', class: 'edit-worker') %>
-            </a>
-            <a href="shifts/new?worker_id={{worker.id}}">
-              <%= icon('plus', class: 'add-worker-shift') %>
-            </a>
-          </td>
-        </tr>
-      </table>
+      <div class="row">
+        <div class="col-xs-12">
+          <table>
+            <tr>
+              <th class="text-center">ID</th>
+              <th class="text-center">Name</th>
+              <th class="text-center">Status</th>
+              <th class="text-center">Shifts number this month </th>
+              <th class="text-center">Actions</th>
+            </tr>
+            <tr ng-repeat="worker in final_workers | filter:table">
+              <td class="text-center">{{worker.id}}</td>
+              <td class="text-center">{{worker.name}}</td>
+              <td class="text-center">{{worker.status}}</td>
+              <td class="text-center">{{worker.nb_shifts}}</td>
+              <td class='actions-workers'>
+                <a href="/workers/{{worker.id}}//edit">
+                  <%= icon('pencil', class: 'edit-worker') %>
+                </a>
+                <a href="shifts/new?worker_id={{worker.id}}">
+                  <%= icon('plus', class: 'add-worker-shift') %>
+                </a>
+              </td>
+            </tr>
+          </table>
+          <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize" data-boundary-links="true"></div>
+        </div>
+      </div>
+
     </div>
-      <!-- <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize" data-boundary-links="true"></div> -->
+
 </div>
 
 
