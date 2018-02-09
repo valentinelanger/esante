@@ -13,7 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require selectize
+//= require angular
+//= require angular-rails-templates
+//= require app.js
 //= require_tree .
+
 
 $('.selectize').selectize({
     valueField: 'id',

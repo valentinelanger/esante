@@ -11,8 +11,9 @@ class ShiftsController < ApplicationController
   end
 
   def new
-    if (params[:shift])
-      @shift = Shift.new(shift_params)
+    if (params[:worker_id])
+      @shift = Shift.new()
+      @shift.worker_id = params[:worker_id]
     else
       @shift = Shift.new
     end

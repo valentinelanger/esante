@@ -23,6 +23,9 @@ gem "simple_calendar", "~> 2.0"
 gem 'momentjs-rails', '~> 2.9',  :github => 'derekprior/momentjs-rails'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 gem 'yui-compressor'
+gem 'angularjs-rails'
+gem 'angular-rails-templates'
+gem 'active_model_serializers', '~> 0.10.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
