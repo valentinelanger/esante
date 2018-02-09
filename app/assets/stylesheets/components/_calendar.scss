@@ -47,12 +47,13 @@
 
 .add-shift {
     position: absolute;
-    top: 40%;
-    left: 43%;
-    font-size: 26px;
-    color: $olive;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
     &:hover {
-        color: $olive-dark;
+        opacity: 0.5;
+        background-color: $olive;
     }
 }
 
