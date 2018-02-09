@@ -8,6 +8,8 @@
 .text-footer-right {
   text-align: right;
   font-weight: lighter;
+  font-size: 16px;
+  margin: 0 !important;
 }
 
 .footer.mobile {
@@ -24,24 +26,4 @@
   z-index: 9;
   width: 100%;
   color: #666666;
-
-    .navbar-wagon-dropdown-menu:before {
-    top: 89px;
-    background-color: white;
-    transform: rotate(45deg);
-    border-right: 1px solid #E6E6E6;
-    border-bottom: 1px solid #E6E6E6;
-    border-left: none;
-    border-top: none;
-  }
-
-  .dropdown-menu {
-    top: none;
-    max-width: 300px;
-    margin-bottom: 8px;
-  }
-
-  .dropdown-menu a {
-    white-space: normal;
-  }
 }
