@@ -10,7 +10,6 @@ app.controller('WorkerCtrl', ['$scope', '$http', function($scope, $http) {
   function pagination() {
     $scope.currentPage = 1;
     $scope.numPerPage = 10;
-    // $scope.maxSize = 10;
 
     $scope.numPages = function () {
       return Math.ceil($scope.workers.length / $scope.numPerPage);
@@ -19,11 +18,8 @@ app.controller('WorkerCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.$watch('currentPage + numPerPage', function() {
           var begin = (($scope.currentPage - 1) * $scope.numPerPage)
           , end = begin + $scope.numPerPage;
-          console.log('there are begin and end');
-          console.log(begin);
-          console.log(end);
+
           $scope.final_workers = $scope.workers.slice(begin, end);
-          console.log($scope.final_workers);
     });
   }
 }]);
