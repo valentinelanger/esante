@@ -1,7 +1,7 @@
 .shift-event {
     position: relative;
-    background-color: $blue-light;
-    color: $my-white;
+    background-color: $primary-dark;
+    color: white;
     text-align: left;
     border-radius: 4px;
     min-height: 70px;
@@ -21,3 +21,34 @@
     }
 }
 
+
+.add-shift {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    &:hover {
+        opacity: 0.5;
+        background-color: $placeholder-gray;
+    }
+}
+
+.add-shift-big {
+    position: absolute;
+    top: -20px;
+    right: 9px;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    font-size: 36px;
+    color: white;
+    background-color: $placeholder-gray;
+    padding-top: 13px;
+    padding-left: 1px;
+    &:hover {
+        background-color: $gray-dark;
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.2);
+    }
+}

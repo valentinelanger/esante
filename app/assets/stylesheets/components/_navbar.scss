@@ -22,10 +22,10 @@
 
 .link-navbar .active {
   text-decoration: none;
-  color: $blue-light;
+  color: $primary;
   &:after {
     position: absolute;
-    border-bottom: 3px solid $blue-light;
+    border-bottom: 3px solid $primary;
     top: 40px;
     left: 0;
     right: 0;
@@ -36,14 +36,14 @@
 .link-navbar {
     text-decoration: none;
     font-weight: bold;
-    color: $almost-black;
+    color: $my-black;
     &:hover {
       text-decoration: none;
-      color: $blue-light;
+      color: $primary;
     }
     &:hover:after {
         position: absolute;
-        border-bottom: 4px solid $blue-light;
+        border-bottom: 4px solid $primary;
         top: 40px;
         left: 0;
         right: 0;

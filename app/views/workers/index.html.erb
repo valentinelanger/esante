@@ -1,45 +1,45 @@
   <div class="container" ng-app="eSante">
     <div ng-controller="WorkerCtrl">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="table-worker-header">
-            <input type="text" class="search-worker" data-ng-model="table" placeholder="search for anything about worker" />
-            <a class='button-esante btn-sm' href="workers/new">Add a worker</a>
+      <div class="worker-index">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="table-worker-header">
+              <input type="text" class="search-worker" data-ng-model="table" placeholder="search for anything about worker" />
+              <a class='button-esante btn-sm' href="workers/new">Add a worker</a>
+            </div>
           </div>
+          <div class="col-xs-12">
+            <table>
+              <tr class='worker-table-columns-title'>
+                <th class="text-center">ID</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">Status</th>
+                <th class="text-center">Shifts number this month </th>
+                <th class="text-center">Actions</th>
+              </tr>
+              <tr class='worker-table-content' ng-repeat="worker in final_workers | filter:table">
+                <td class="text-center">{{worker.id}}</td>
+                <td class="text-center">{{worker.name}}</td>
+                <td class="text-center">{{worker.status}}</td>
+                <td class="text-center">{{worker.nb_shifts}}</td>
+                <td class='actions-workers'>
+                  <a href="/workers/{{worker.id}}//edit">
+                    <%= icon('pencil', class: 'edit-worker') %>
+                  </a>
+                  <a href="shifts/new?worker_id={{worker.id}}">
+                    <%= icon('plus', class: 'add-worker-shift') %>
+                  </a>
+                </td>
+              </tr>
+            </table>
+            <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize" data-boundary-links="true"></div>
+          </div>
+        </div>
+      </div>
 
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <table>
-            <tr>
-              <th class="text-center">ID</th>
-              <th class="text-center">Name</th>
-              <th class="text-center">Status</th>
-              <th class="text-center">Shifts number this month </th>
-              <th class="text-center">Actions</th>
-            </tr>
-            <tr ng-repeat="worker in final_workers | filter:table">
-              <td class="text-center">{{worker.id}}</td>
-              <td class="text-center">{{worker.name}}</td>
-              <td class="text-center">{{worker.status}}</td>
-              <td class="text-center">{{worker.nb_shifts}}</td>
-              <td class='actions-workers'>
-                <a href="/workers/{{worker.id}}//edit">
-                  <%= icon('pencil', class: 'edit-worker') %>
-                </a>
-                <a href="shifts/new?worker_id={{worker.id}}">
-                  <%= icon('plus', class: 'add-worker-shift') %>
-                </a>
-              </td>
-            </tr>
-          </table>
-          <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize" data-boundary-links="true"></div>
-        </div>
-      </div>
+
 
     </div>
-
 </div>
 
 

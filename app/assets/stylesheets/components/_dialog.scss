@@ -8,7 +8,7 @@
 
 .dialog-title {
     position: relative;
-    background-color: $dialog-title-color;
+    background-color: $primary-dark;
     height: 90px;
     border-radius:2px;
 }
@@ -20,7 +20,6 @@
     }
 }
 
-
 .edit-shift {
     position: absolute;
     left: 10px;
@@ -30,7 +29,10 @@
     padding: 12px;
     width: 40px;
     height: 40px;
-    background-color: $blue-regular;
+    background-color: $primary;
+    &:hover {
+      background-color: $primary-hover;
+    }
 }
 
 .open{
@@ -41,15 +43,15 @@
   top:-1000px;
   margin-left:-80px;
   margin-top:-30px;
-  border:1px solid #ccc;
-  background-color:#fff;
+  border:1px solid $border-gray;
+  background-color:white;
   border-radius:6px;
   padding:10px 30px;
   color:#444;
   transition:all ease-out .6s;
 
   &:hover {
-    border:1px solid #aaa;
+    border:1px solid $border-gray;
     box-shadow:0 0 8px #ccc inset;
     transition:all ease-out .6s;
   }
@@ -73,7 +75,7 @@
     font-size: 24px;
   }
   p, span {
-    color: $almost-black;
+    color: $my-black;
     font-weight: lighter;
   }
 }

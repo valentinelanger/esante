@@ -1,6 +1,6 @@
 .selectize-dropdown-content .active {
     color: white;
-    background-color: $blue-light !important;
+    background-color: $primary-hover !important;
     background-image: none !important;
     background-repeat: none !important;
 }
@@ -16,3 +16,17 @@
     box-shadow: none !important;
 }
 
+.selectize-control .selectize-input {
+    color: $gray-dark;
+    border: none !important;
+    border-bottom: 1px solid $border-gray !important;
+    border-radius: 0;
+    font-size: 18px !important;
+}
+
+.selectize-dropdown .selectize-dropdown-content {
+    font-size: 18px !important;
+    color: $gray-dark !important;
+    box-shadow: none !important;
+    border: 1px solid $border-gray !important;
+}

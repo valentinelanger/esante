@@ -19,16 +19,16 @@
   background: #f2f2f2 !important;
   background: rgba(0, 0, 0, 0.06) !important;
   border: 0 none !important;
-  -webkit-box-shadow: inset 0 0 12px 4px #ffffff;
-  box-shadow: inset 0 0 12px 4px #ffffff;
+  // -webkit-box-shadow: inset 0 0 12px 4px #ffffff;
+  // box-shadow: inset 0 0 12px 4px #ffffff;
 }
 .selectize-control.plugin-drag_drop .ui-sortable-placeholder::after {
   content: '!';
   visibility: hidden;
 }
 .selectize-control.plugin-drag_drop .ui-sortable-helper {
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  // -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .selectize-dropdown-header {
   position: relative;
@@ -144,8 +144,8 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  // -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  // box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -161,8 +161,8 @@
   cursor: default !important;
 }
 .selectize-input.focus {
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+  // -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+  // box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 .selectize-input.dropdown-active {
   -webkit-border-radius: 3px 3px 0 0;
@@ -206,8 +206,8 @@
   border: 0 none !important;
   background: none !important;
   line-height: inherit !important;
-  -webkit-user-select: auto !important;
-  -webkit-box-shadow: none !important;
+  // -webkit-user-select: auto !important;
+  // -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 .selectize-input > input::-ms-clear {
@@ -241,11 +241,9 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 0 0 3px 3px;
-  -moz-border-radius: 0 0 3px 3px;
-  border-radius: 0 0 3px 3px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
 }
 .selectize-dropdown [data-selectable] {
   cursor: pointer;

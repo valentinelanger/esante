@@ -5,7 +5,7 @@
 .calendar-title {
     font-size: 24px;
     font-weight: bolder;
-    color: $gray;
+    color: $my-black;
 }
 
 .simple-calendar {
@@ -23,11 +23,11 @@
     margin: 30px 0;
     a {
         font-size: 14px;
-        color: $dark-gray;
+        color: $gray-dark;
     }
     a:hover {
         text-decoration:none;
-        font-weight: bolder;
+        color: $my-black;
     }
 }
 .simple-calendar table > tbody > tr > td {
@@ -43,37 +43,6 @@
     text-align: right;
     max-width: 170px !important;
     width: 14%;
-}
-
-.add-shift {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    &:hover {
-        opacity: 0.5;
-        background-color: $olive;
-    }
-}
-
-.add-shift-big {
-    position: absolute;
-    top: -20px;
-    right: 9px;
-    text-align: center;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    font-size: 36px;
-    color: white;
-    background-color: $olive;
-    padding-top: 13px;
-    padding-left: 1px;
-    &:hover {
-        background-color: $olive-dark;
-        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.2);
-    }
 }
 
 .calendar-heading > * {

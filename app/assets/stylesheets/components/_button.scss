@@ -1,12 +1,12 @@
 .button-esante {
     min-width: 100px;
-    background-color: $green4;
+    background-color: $primary;
     border-radius: 6px;
-    color: $my-white;
+    color: white;
     border: none;
     &:hover {
         color: white;
-        background-color: $green2;
+        background-color: $primary-hover;
     }
 }
 
