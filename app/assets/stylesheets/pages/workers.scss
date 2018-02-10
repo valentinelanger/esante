@@ -10,6 +10,17 @@
 
 .worker-index {
     margin: 0 40px;
+    .pagination > .active > a {
+        background-color: $primary !important;
+        border-color: $primary !important;
+        color: white;
+    }
+    .pagination > li > a {
+        color: $primary-dark;
+    }
+    .pagination > .disabled > a {
+        color: $placeholder-gray;
+    }
 }
 
 .worker-table table > tbody > tr > td {
@@ -63,3 +74,4 @@ td, th {
         }
     }
 }
+

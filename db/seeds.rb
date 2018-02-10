@@ -59,61 +59,51 @@ Lea = Worker.create!(
 puts "creating all shifts"
 
 Shift_1 = Shift.create!(
-  planning_id: '1',
   worker_id: Arthur.id,
   start_date: '2018-2-1'
   )
 
 Shift_2 = Shift.create!(
-  planning_id: '1',
   worker_id: Julie.id,
   start_date: '2018-2-2'
   )
 
 Shift_3 = Shift.create!(
-  planning_id: '1',
   worker_id: Marc.id,
   start_date: '2018-2-3'
   )
 
 Shift_4 = Shift.create!(
-  planning_id: '1',
   worker_id: Antoine.id,
   start_date: '2018-2-4'
   )
 
 Shift_5 = Shift.create!(
-  planning_id: '1',
   worker_id: Flore.id,
   start_date: '2018-2-5'
   )
 
 Shift_6 = Shift.create!(
-  planning_id: '1',
   worker_id: Emilie.id,
   start_date: '2018-2-6'
   )
 
 Shift_7 = Shift.create!(
-  planning_id: '1',
   worker_id: Lea.id,
   start_date: '2018-2-7'
   )
 
 Shift_8 = Shift.create!(
-  planning_id: '1',
   worker_id: Flore.id,
   start_date: '2018-2-8'
   )
 
 Shift_9 = Shift.create!(
-  planning_id: '1',
   worker_id: Marc.id,
   start_date: '2018-2-9'
   )
 
 Shift_10 = Shift.create!(
-  planning_id: '1',
   worker_id: Antoine.id,
   start_date: '2018-2-10'
   )
