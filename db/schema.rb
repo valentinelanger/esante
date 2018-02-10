@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180206115908) do
+ActiveRecord::Schema.define(version: 20180210145842) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "shifts", force: :cascade do |t|
-    t.bigint "planning_id"
     t.bigint "worker_id"
     t.date "start_date"
     t.datetime "created_at", null: false
