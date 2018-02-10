@@ -15,12 +15,14 @@
                 <th class="text-center">Name</th>
                 <th class="text-center">Status</th>
                 <th class="text-center">Shifts number this month </th>
+                <th class="text-center">Total shifts number</th>
                 <th class="text-center">Actions</th>
               </tr>
               <tr class='worker-table-content' ng-repeat="worker in final_workers | filter:table">
                 <td class="text-center">{{worker.id}}</td>
                 <td class="text-center">{{worker.name}}</td>
                 <td class="text-center">{{worker.status}}</td>
+                <td class="text-center">{{worker.nb_shifts_this_month}}</td>
                 <td class="text-center">{{worker.nb_shifts}}</td>
                 <td class='actions-workers'>
                   <a href="/workers/{{worker.id}}//edit">
@@ -32,7 +34,7 @@
                 </td>
               </tr>
             </table>
-            <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize" data-boundary-links="true"></div>
+            <div uib-pagination previous-text="" next-text="" total-items='workers.length' ng-model='currentPage' ng-change="pageChanged()" items-per-page='numPerPage' ng-change="pageChanged()" boundary-links ="true"></div>
           </div>
         </div>
       </div>

@@ -5,9 +5,14 @@ class Worker < ApplicationRecord
     validates :first_name, :last_name, presence: true
     validates :status, inclusion: { in: STATUSES, allow_nil: false }
 
-    def nb_shifts
+    def nb_shifts_this_month
         current_month = Date.today.mon
         nb_shifts = Shift.count { |shift| shift.worker_id == self.id && shift.start_date.mon == current_month }
+    end
+
+    def nb_shifts
+        current_month = Date.today.mon
+        nb_shifts = Shift.count { |shift| shift.worker_id == self.id }
     end
 
     def name
