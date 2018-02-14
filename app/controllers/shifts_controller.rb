@@ -7,9 +7,6 @@ class ShiftsController < ApplicationController
     return @shifts, @shifts_date
   end
 
-  def show
-  end
-
   def new
     if (params[:worker_id])
       @shift = Shift.new()

@@ -1,5 +1,5 @@
 class WorkersController < ApplicationController
-  before_action :set_worker, only: [:show, :edit, :update, :destroy]
+  before_action :set_worker, only: [:edit, :update, :destroy]
   serialization_scope :view_content
 
   def index
@@ -9,9 +9,6 @@ class WorkersController < ApplicationController
       format.json { render json: @workers, each_serializer: WorkerSerializer }
       format.html
     end
-  end
-
-  def show
   end
 
   def new
